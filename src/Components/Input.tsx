@@ -4,7 +4,7 @@ import InputError from "./InputError";
 
 interface InputProps {
   type: string;
-  register: UseFormRegister<any>;
+  register?: UseFormRegister<any>;
   children?: ReactNode;
   className?: string;
   error: FieldError;
