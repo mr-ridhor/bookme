@@ -6,7 +6,7 @@ import { LiaBedSolid } from "react-icons/lia";
 import Flights from "../../Components/Icons/Flights.jsx";
 import { IoCarOutline, IoFlowerOutline } from "react-icons/io5";
 import Taxi from "../../Components/Icons/Taxi.js";
-import Input from "../../Components/Input.js";
+// import Input from "../../Components/Input.js";
 const HomePage = () => {
   return (
     <div className="h-full w-full">
