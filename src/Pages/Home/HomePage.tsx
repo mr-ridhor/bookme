@@ -78,25 +78,36 @@ const HomePage = () => {
             </p>
           </div>
           <div className="absolute -bottom-6 border-2 bg-yellow-400 rounded-lg  right-0 left-0 h-14 w-full flex gap-2 p-1 ">
-            <div className="rounded-sm bg-white w-5/12 h-full">
-              <div className="flex  items-center  w-full p-2 gap-1 h-full">
-                <LiaBedSolid />
-                <input name="map" type="text"  className="flex-1  h-full"/>
+            <div className="rounded-sm bg-white w-5/12 h-full ">
+              <div className="flex  items-center  w-full  p gap-1 h-ll rounded-md  ">
+                <input name="map" type="text"  className="w-full   focus:border-2 py-2 focus:outline-blue-800 relative  px-10 placeholder:text-amber-950" placeholder="Where are you going?"/>
                 {/* <Input type={"text"}   name={"map"} register={register} /> */}
+              <span className="absolute left-2 top-">
+
+                <LiaBedSolid size={30} />
+              </span>
               </div>
             </div>
-            <div className="rounded-sm bg-white flex items-center w-3/12">
-              <div className="w-full flex px-2 gap-0.5">
-                <LiaBedSolid />
-                <input name="map" type="text" className="flex-1" />
+            <div className="rounded-sm bg-white flex items-center w-3/12 relative">
+              <div className="w-full flex ">
+                {/* <LiaBedSolid  size={30}/> */}
+                <input name="map" type="text" className="w-full py-2  px-10" />
               </div>
+              <span className="absolute left-2 top-">
+
+                <LiaBedSolid size={30} />
+              </span>
               {/* <Input type={"text"}   name={"map"} register={register} /> */}
             </div>
-            <div className="rounded-sm bg-white flex items-center w-3/12">
-              <LiaBedSolid />
-              <select name="" id="">
+            <div className="relative rounded-sm bg-white flex items-center w-3/12 gap-0.5">
+            
+              <select name="" id="" className="w-full px-10 py-2">
                 <option value="">rooms</option>
               </select>
+              <span className="absolute left-2 top-">
+
+                <LiaBedSolid size={30} />
+              </span>
             </div>
             <Button
               type="submit"
