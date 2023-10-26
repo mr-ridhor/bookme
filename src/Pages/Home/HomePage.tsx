@@ -6,9 +6,9 @@ import { LiaBedSolid } from "react-icons/lia";
 import Flights from "../../Components/Icons/Flights.jsx";
 import { IoCarOutline, IoFlowerOutline } from "react-icons/io5";
 import Taxi from "../../Components/Icons/Taxi.js";
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 // import Input from "../../Components/Input.js";
 const HomePage = () => {
   return (
@@ -74,7 +74,7 @@ const HomePage = () => {
               <p>Airport taxi</p>
             </div>
           </div>
-          <div className=" mt-2 h-56  flex items-center border px-2 relative">
+          <div className=" mt-2 h-56  flex items-center borderz px-2 relative">
             <div className="text-white flex flex-col">
               <p className=" font-bold text-[45px]">Find your next stay</p>
               <p className="text-[22px]">
@@ -90,7 +90,7 @@ const HomePage = () => {
                     className="w-full   focus:border-2 py-2 focus:outline-blue-800 relative  px-10 placeholder:text-amber-950"
                     placeholder="Where are you going?"
                   />
-                  {/* <Input type={"text"}   name={"map"} register={register} /> */}
+
                   <span className="absolute left-2 top-">
                     <LiaBedSolid size={30} />
                   </span>
@@ -98,19 +98,10 @@ const HomePage = () => {
               </div>
               <div className="rounded-md bg-white flex items-center w-4/12 relative">
                 <div className="w-full flex  px-2">
-                <span className="">
-                  <LiaBedSolid size={30} />
-                </span>
-                  {/* <input
-                    name="map"
-                    type="text"
-                    className="w-full py-2  px-10 text-sm"
-                    placeholder="  Check-in date - Check-out date"
-                  /> */}
-                  
+                  <span className="">
+                    <LiaBedSolid size={30} />
+                  </span>
                 </div>
-               
-                {/* <Input type={"text"}   name={"map"} register={register} /> */}
               </div>
               <div className="relative rounded-md bg-white flex items-center w-4/12 gap-0.5">
                 <select name="" id="" className="w-full px-10 py-2">
@@ -134,17 +125,43 @@ const HomePage = () => {
 
       {/* mobile */}
 
-      <div className="bg-blue-800  flex md:hidden items-center justify-between p-2 text-white">
-        <span className="font-medium">
-          <p>Bookme.com</p>
-        </span>
-        <div className="flex gap-2 items-center">
-          <span>
-            <HiOutlineUserCircle />
+      <div className="bg-blue-800 flex-col flex md:hidden    px-3 pt-4 pb-2 text-white">
+        <div className=" items-center justify-between w-full flex text-2xl">
+          <span className="font-medium ">
+            <p>Bookme.com</p>
           </span>
-          <span>
-            <HiBars3 />
-          </span>
+          <div className="flex gap-2 items-center">
+            <span>
+              <HiOutlineUserCircle />
+            </span>
+            <span>
+              <HiBars3 />
+            </span>
+          </div>
+        </div>
+        <div className=" flex w-full overflow-x-scroll  gap-4 mt-3 text-sm">
+          <div className="border border-white min-] rounded-full   px-4 py-3 gap-2 items-center flex">
+            <span className="flex items-center ">
+              <LiaBedSolid size={25} />
+            </span>
+            <p className="">Stays</p>
+          </div>
+          <div className="flex items-center gap-2 ">
+              <Flights />
+              <p>Flights</p>
+            </div>
+            <div className="flex items-center gap-2 min-w-[110px] ">
+              <IoCarOutline size={20} />
+              <p>Car rentals</p>
+            </div>
+            <div className="flex items-center gap-2 ">
+              <IoFlowerOutline />
+              <p>Attractions</p>
+            </div>
+            <div className="flex items-center gap-2 min-w-[120px]">
+              <Taxi />
+              <p>Airport taxi</p>
+            </div>
         </div>
       </div>
     </div>
