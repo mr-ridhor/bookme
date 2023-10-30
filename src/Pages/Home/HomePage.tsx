@@ -10,6 +10,7 @@ import { GoSearch } from "react-icons/go";
 import { AiOutlineClose } from "react-icons/ai";
 import Card from "../../Components/Card.js";
 import Images from "../../images/Images.js";
+import Explore from "./Partials/Explore.js";
 
 const HomePage = () => {
   interface ImageProps {
@@ -261,6 +262,14 @@ const HomePage = () => {
                 </div>
               </div>
             </Card>
+          </div>
+          <div className="p">
+            <Card>
+              <div className="p-2 ">
+                <Explore/>
+              </div>
+            </Card>
+            
           </div>
         </div>
       </div>
