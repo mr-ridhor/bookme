@@ -1,37 +1,8 @@
-import Images from "../../../images/Images";
+// import Images from "../../../images/Images";
+import exploreList from '../../../Utils/data'
+
 const Explore = () => {
-  const exploreList = [
-    {
-      name: "Abuja",
-      desc: "202 properties",
-      img: `${Images.place1}`,
-    },
-    {
-      name: "Paris",
-      desc: "20 properties",
-      img: `${Images.place2}`,
-    },
-    {
-      name: "Mumbai",
-      desc: "22 properties",
-      img: `${Images.place3}`,
-    },
-    {
-      name: "New York",
-      desc: "250 properties",
-      img: `${Images.place4}`,
-    },
-    {
-      name: "Lagos",
-      desc: "202 properties",
-      img: `${Images.place5}`,
-    },
-    {
-      name: "Lag",
-      desc: "211 properties",
-      img: `${Images.place6}`,
-    },
-  ];
+  
   return (
     <div className="flex w-full  ">
       {exploreList.map((list, id) => {

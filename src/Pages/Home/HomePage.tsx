@@ -1,4 +1,4 @@
-import { BsQuestionCircle } from "react-icons/bs";
+import { BsBuildings, BsHeart, BsQuestionCircle } from "react-icons/bs";
 import Button from "../../Components/Button";
 import { HiBars3 } from "react-icons/hi2";
 import { HiOutlineUserCircle } from "react-icons/hi";
@@ -11,33 +11,43 @@ import { AiOutlineClose } from "react-icons/ai";
 import Card from "../../Components/Card.js";
 import Images from "../../images/Images.js";
 import Explore from "./Partials/Explore.js";
-
+import exploreList from "../../Utils/data.js";
 const HomePage = () => {
   interface ImageProps {
     title: string;
     description: string;
     imageUrl: string;
-    name:string
+    name: string;
   }
-  const Image:React.FC<ImageProps> = ({ title, description, imageUrl,name }) => {
+  const Image: React.FC<ImageProps> = ({
+    title,
+    description,
+    imageUrl,
+    name,
+  }) => {
     return (
       <div className="border space-y-3  px-2 py-3">
         <div className="flex justify-between gap-6">
-        <div className="w-[70%] text-sm">
-          <p className="font-bold">{title}</p>
-          <p>{description}</p>
-        </div>
-        <div className="w-16 h-16">
-          <img src={imageUrl} alt="Image" />
-        </div>
-
+          <div className="w-[70%] text-sm">
+            <p className="font-bold">{title}</p>
+            <p>{description}</p>
+          </div>
+          <div className="w-16 h-16">
+            <img src={imageUrl} alt="Image" />
+          </div>
         </div>
         <div className=" ">
-          <button className="border h-10  w-24 font-medium rounded-sm border-blue-800 text-blue-700">{name}</button>
+          <button className="border h-10  w-24 font-medium rounded-sm border-blue-800 text-blue-700">
+            {name}
+          </button>
         </div>
       </div>
     );
   };
+  const lagosIkejaList = exploreList.filter(
+    (item) => item.name === "Lagos" || item.name === "Lag"
+  );
+
   return (
     <div className="h-full w-full">
       <div className="w-full bg-blue-800 flex items-center justify-center">
@@ -253,12 +263,12 @@ const HomePage = () => {
                     imageUrl={Images.image1}
                     name={"Find a stay"}
                   />
-                  <Image  title="Save 15% with Late Escape Deals"
+                  <Image
+                    title="Save 15% with Late Escape Deals"
                     description="Explore thousands of dream destinations worldwide"
                     imageUrl={Images.image2}
                     name={"Find deal"}
-                    />
-
+                  />
                 </div>
               </div>
             </Card>
@@ -266,10 +276,43 @@ const HomePage = () => {
           <div className="p">
             <Card>
               <div className="p-2 ">
-                <Explore/>
+                <Explore />
               </div>
             </Card>
-            
+          </div>
+
+          <div className="">
+            <Card>
+              <div className="p-2">
+                <div className="">
+                  <p>Quick and easy trip planner</p>
+                  <p>Pick a vibe and explore the top destinations in Nigeria</p>
+                </div>
+                <div className="pt-2 flex gap-4">
+                  <div className="border-[1.5px] text-[#3C93D0] rounded-full flex  items-center  gap-2 p-3 w-24 border-[#7EB7E0] bg-[#F0F7FB]">
+                    <BsBuildings className="" />
+                    <p>City</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <BsHeart />
+                    <p>Romance</p>
+                  </div>
+                </div>
+                <div className="flex w-full gap-2 mt-4">
+                  {lagosIkejaList.map((item, id) => {
+                    return (
+                      <div className="" key={id}>
+                        <div className="h-28 w-40">
+                          <img alt="" src={`${item.img}`} />
+                        </div>
+
+                        <span className="text-black/50">{item.miles}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </div>
