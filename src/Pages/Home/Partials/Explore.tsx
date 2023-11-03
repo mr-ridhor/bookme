@@ -1,5 +1,5 @@
 // import Images from "../../../images/Images";
-import exploreList from '../../../Utils/data'
+import {exploreList} from '../../../Utils/data'
 
 const Explore = () => {
   

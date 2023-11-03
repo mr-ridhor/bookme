@@ -11,7 +11,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import Card from "../../Components/Card.js";
 import Images from "../../images/Images.js";
 import Explore from "./Partials/Explore.js";
-import exploreList from "../../Utils/data.js";
+import { exploreList, properties } from "../../Utils/data.js";
 const HomePage = () => {
   interface ImageProps {
     title: string;
@@ -285,7 +285,7 @@ const HomePage = () => {
             <Card>
               <div className="p-2">
                 <div className="">
-                  <p>Quick and easy trip planner</p>
+                  <p className="font-bold">Quick and easy trip planner</p>
                   <p>Pick a vibe and explore the top destinations in Nigeria</p>
                 </div>
                 <div className="pt-2 flex gap-4">
@@ -310,6 +310,33 @@ const HomePage = () => {
                       </div>
                     );
                   })}
+                </div>
+              </div>
+            </Card>
+          </div>
+          <div className="">
+            <Card>
+              <div className="p-2">
+                <div className="">
+                  <p className="font-bold text-xl">
+                    Stay at our top unique properties
+                  </p>
+                  <p className="text-[#6B6B6B]">
+                    From castles and villas to boats and igloos, we have it all
+                  </p>
+                </div>
+                <div>
+                  <div className="flex gap-2 w-full overflow-auto">
+                    {properties.map((item, id) => {
+                      return (
+                        <div className="" key={id}>
+                          <Card className="shadow-lg rounded h-[200px] w-[300px]">
+                            <img src={`${item.img}`} alt="" className="rounded p-0"/>
+                          </Card>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </Card>
